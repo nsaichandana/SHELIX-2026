@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  @apply bg-void text-ink-primary font-body antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(214, 64, 159, 0.35);
+  color: #fff;
+}
+
+/* Visible keyboard focus, everywhere */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #3b6eff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scrollbar tuned to the theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #06081c;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3b6eff, #d6409f);
+  border-radius: 6px;
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs sm:text-sm tracking-[0.35em] uppercase text-ink-muted;
+  }
+
+  .section-shell {
+    @apply relative w-full px-6 sm:px-10 lg:px-16;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3.5
+      font-mono text-sm uppercase tracking-[0.15em] text-void
+      bg-gradient-to-r from-electric via-violet to-magenta
+      shadow-glow transition-transform duration-200 ease-out
+      hover:scale-[1.03] hover:shadow-glow-pink
+      focus-visible:scale-[1.03];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-7 py-3.5
+      font-mono text-sm uppercase tracking-[0.15em] text-ink-primary
+      border border-navy-border bg-white/[0.03] backdrop-blur-sm
+      transition-colors duration-200 ease-out
+      hover:border-electric/60 hover:bg-white/[0.06];
+  }
+}
