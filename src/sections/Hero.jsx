@@ -45,16 +45,22 @@ export default function Hero() {
             {eventInfo.organizer}
           </motion.p>
 
-          <motion.h1
-            {...fadeUp(0.08)}
-            className="font-display text-[15vw] leading-[0.95] tracking-tight text-ink-primary sm:text-6xl md:text-7xl lg:text-[5.2rem]"
-          >
-            SHELIX
-            <span className="bg-gradient-to-r from-electric via-violet to-magenta bg-clip-text text-transparent">
-              {" "}
-              2026
-            </span>
-          </motion.h1>
+         {/* Sathyabama Logo + SHELIX Heading */}
+<motion.div {...fadeUp(0.08)} className="flex flex-col items-start">
+  <img
+    src="/sathyabama logo.jpeg"
+    alt="Sathyabama Institute of Science and Technology"
+    className="mb-8 h-auto w-[280px] object-contain sm:w-[340px] md:w-[400px]"
+  />
+
+  <h1 className="font-display text-[15vw] leading-[0.95] tracking-tight text-ink-primary sm:text-6xl md:text-7xl lg:text-[5.2rem]">
+    SHELIX
+    <span className="bg-gradient-to-r from-electric via-violet to-magenta bg-clip-text text-transparent">
+      {" "}
+      2026
+    </span>
+  </h1>
+</motion.div>
 
           <motion.h2
             {...fadeUp(0.16)}
