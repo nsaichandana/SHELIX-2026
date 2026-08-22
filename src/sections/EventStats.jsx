@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { eventInfo } from "../data/eventInfo.js";
 
@@ -18,24 +18,32 @@ function CountUpValue({ target, prefix = "", reduceMotion }) {
 
   const start = () => {
     if (started.current || reduceMotion) return;
+
     started.current = true;
+
     const duration = 1200;
     const startTime = performance.now();
 
     const step = (now) => {
       const progress = Math.min((now - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
+
       setValue(Math.round(eased * target));
-      if (progress < 1) requestAnimationFrame(step);
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
     };
+
     requestAnimationFrame(step);
   };
 
+  useEffect(() => {
+    start();
+  }, [target, reduceMotion]);
+
   return (
-    <motion.span
-      onViewportEnter={start}
-      viewport={{ once: true, margin: "-100px" }}
-    >
+    <motion.span>
       {prefix}
       {value}
     </motion.span>

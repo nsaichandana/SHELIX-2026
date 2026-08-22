@@ -27,7 +27,7 @@ export const contactChannels = [
     id: "registration",
     label: "Registration Support",
     email: null,
-    phone: "+91 8106899722",
+    phone: "+91 8106899722, +91 77367 99312",
   },
   {
     id: "student",
