@@ -34,11 +34,11 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-void pt-28 pb-20 sm:pt-32"
+      className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-void pt-24 pb-16 sm:pt-28"
     >
       <HelixCircuit />
 
-      <div className="section-shell relative z-10 grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10">
+      <div className="section-shell relative z-10 grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-[1.15fr_0.9fr] lg:gap-16">
         {/* Left: primary content */}
         <div className="max-w-2xl">
           <motion.p {...fadeUp(0)} className="eyebrow mb-6">
@@ -48,12 +48,12 @@ export default function Hero() {
          {/* Sathyabama Logo + SHELIX Heading */}
 <motion.div {...fadeUp(0.08)} className="flex flex-col items-start">
   <img
-    src="/sathyabama logo.jpeg"
-    alt="Sathyabama Institute of Science and Technology"
-    className="mb-8 h-auto w-[280px] object-contain sm:w-[340px] md:w-[400px]"
-  />
+  src="/logologo.jpeg"
+  alt="SHELIX 2026"
+  className="mb-5 h-auto w-[200px] object-contain sm:w-[240px] md:w-[280px]"
+/>
 
-  <h1 className="font-display text-[15vw] leading-[0.95] tracking-tight text-ink-primary sm:text-6xl md:text-7xl lg:text-[5.2rem]">
+  <h1 className="font-display text-[15vw] leading-[0.95] tracking-tight text-ink-primary sm:text-6xl md:text-7xl lg:text-[4.7rem]">
     SHELIX
     <span className="bg-gradient-to-r from-electric via-violet to-magenta bg-clip-text text-transparent">
       {" "}

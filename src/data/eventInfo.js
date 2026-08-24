@@ -64,6 +64,7 @@ export const eventInfo = {
     { label: "Journey", href: "#journey" },
     { label: "Submissions", href: "#submissions" },
     { label: "Rules", href: "#rules" },
+    { label: "FAQ", href: "#faq" },
     { label: "Register", href: "#register" },
     { label: "Contact", href: "#contact" },
   ],

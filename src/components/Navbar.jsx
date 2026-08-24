@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Instagram, ArrowUpRight } from "lucide-react";
-import Logo from "./Logo.jsx";
 import { eventInfo } from "../data/eventInfo.js";
 import { eventLinks } from "../data/eventLinks.js";
 
@@ -52,16 +51,17 @@ export default function Navbar() {
         aria-label="Primary"
         className="section-shell flex h-20 items-center justify-between"
       >
-        <a
-          href="#home"
-          onClick={(e) => handleNavClick(e, "#home")}
-          className="flex items-center gap-2.5"
-        >
-          <Logo className="h-8 w-8" />
-          <span className="font-display text-lg tracking-wide text-ink-primary">
-            SHELIX <span className="text-magenta">2026</span>
-          </span>
-        </a>
+    <a
+        href="#home"
+        onClick={(e) => handleNavClick(e, "#home")}
+        className="flex items-center"
+      >
+      <img
+        src="/sathyabama logo.jpeg"
+        alt="Sathyabama Institute of Science and Technology"
+        className="h-14 w-auto object-contain"
+      />
+    </a>
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-8 lg:flex">

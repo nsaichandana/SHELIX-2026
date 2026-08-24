@@ -1,3 +1,4 @@
+import FAQ from "./sections/FAQ.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Hero from "./sections/Hero.jsx";
 import EventOverview from "./sections/EventOverview.jsx";
@@ -22,6 +23,7 @@ export default function App() {
         <HackathonJourney />
         <SubmissionRequirements />
         <HackathonRules />
+        <FAQ />
         <RegistrationCTA />
         <Contact />
       </main>
